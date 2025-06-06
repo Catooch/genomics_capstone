@@ -25,12 +25,11 @@ for sample in SRR2584863 SRR2584866 SRR2589044; do
     variant_count=$(grep -v "^#" results/vcf/${sample}.vcf | wc -l)
 
     # Save to CSV
-    echo "${sample},raw_reads,${raw_count}" >> results/alignment_summary.csv
+    echo "${sample},raw_reads,${raw_count}" >> results/alignment_summary2.csv
     echo "${sample},trimmed_reads,${trimmed_count}" >> results/alignment_summary2.csv
     echo "${sample},aligned_reads,${aligned_count}" >> results/alignment_summary2.csv
     echo "${sample},variants,${variant_count}" >> results/alignment_summary2.csv
 
 done
 
-echo "Summary written to results/alignment_summary.csv"
 
